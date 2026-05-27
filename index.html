@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MITO House | Desmonta mitos. Construye criterio para la vida real.</title>
+  <meta name="description" content="MITO House es un sistema híbrido de aprendizaje para niños y familias que desarrolla pensamiento crítico, toma de decisiones, inteligencia emocional y habilidades para la vida real." />
+
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['Playfair Display', 'serif'],
+          },
+          colors: {
+            mitoBlack: '#111111',
+            mitoCream: '#F6F1E8',
+            mitoSand: '#D8C7A6',
+            mitoWarm: '#B99768',
+            mitoSlate: '#2C2C2C',
+          },
+          boxShadow: {
+            soft: '0 24px 80px rgba(0,0,0,0.10)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { background: #F6F1E8; }
+    .hero-gradient {
+      background: linear-gradient(90deg, rgba(17,17,17,0.82) 0%, rgba(17,17,17,0.52) 42%, rgba(17,17,17,0.08) 100%);
+    }
+    .image-soft {
+      filter: saturate(0.72) contrast(0.96) sepia(0.14);
+    }
+    .lang-active {
+      background: #111111;
+      color: #ffffff;
+    }
+  </style>
+</head>
+
+<body class="font-sans text-mitoBlack antialiased">
+
+  <!-- Header -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white/88 backdrop-blur-md border-b border-black/5">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 h-20 flex items-center justify-between gap-5">
+      <a href="#top" class="tracking-[0.24em] text-lg sm:text-xl font-serif uppercase text-mitoBlack shrink-0">
+        MITO HOUSE
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-black/70">
+        <a href="#idea" class="hover:text-black transition" data-i18n="navIdea">Objetivo</a>
+        <a href="#metodo" class="hover:text-black transition" data-i18n="navMethod">Método</a>
+        <a href="#experiencia" class="hover:text-black transition" data-i18n="navExperience">Experiencia</a>
+        <a href="#contacto" class="hover:text-black transition" data-i18n="navContact">Contacto</a>
+      </nav>
+
+      <div class="flex items-center gap-3 shrink-0">
+        <div class="flex rounded-full border border-black/10 bg-mitoCream p-1 text-xs font-bold">
+          <button type="button" id="langEs" class="lang-active rounded-full px-3 py-2 transition" aria-label="Ver en español">ES</button>
+          <button type="button" id="langEn" class="rounded-full px-3 py-2 transition" aria-label="View in English">EN</button>
+        </div>
+        <a href="#contacto" class="hidden sm:inline-flex items-center rounded-full bg-mitoBlack px-5 py-3 text-sm font-semibold text-white hover:bg-black/80 transition" data-i18n="headerCta">
+          Quiero saber más
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main id="top">
+    <section class="relative min-h-screen flex items-center overflow-hidden pt-20">
+      <img
+        src="un_futuro_por_descubrir_en_familia.png"
+        alt="Familia observando un camino hacia una casa en el árbol"
+        class="absolute inset-0 w-full h-full object-cover image-soft"
+      />
+      <div class="absolute inset-0 hero-gradient"></div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 py-24 w-full">
+        <div class="max-w-2xl text-white">
+          <p class="mb-6 tracking-[0.28em] text-xs sm:text-sm uppercase text-white/70">MITO HOUSE</p>
+          <h1 class="font-serif text-5xl sm:text-6xl lg:text-7xl leading-[0.95] font-semibold" data-i18n="heroTitle">
+            Desmonta mitos. Construye criterio para la vida real.
+          </h1>
+          <p class="mt-8 text-lg sm:text-xl leading-8 text-white/82 max-w-xl" data-i18n="heroSubtitle">
+            Un sistema híbrido de aprendizaje para niños y familias que combina juego, conversación y experiencias reales para desarrollar pensamiento crítico, toma de decisiones e inteligencia emocional.
+          </p>
+          <div class="mt-10 flex flex-col sm:flex-row gap-4">
+            <a href="#contacto" class="inline-flex justify-center rounded-full bg-white px-7 py-4 text-sm font-bold text-mitoBlack hover:bg-mitoCream transition shadow-soft" data-i18n="heroPrimaryCta">
+              Participar en la validación
+            </a>
+            <a href="#metodo" class="inline-flex justify-center rounded-full border border-white/35 px-7 py-4 text-sm font-bold text-white hover:bg-white/10 transition" data-i18n="heroSecondaryCta">
+              Ver cómo funciona
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Idea -->
+    <section id="idea" class="py-24 sm:py-32 bg-mitoCream">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
+        <div class="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
+          <div>
+            <p class="text-sm uppercase tracking-[0.25em] text-mitoWarm font-bold" data-i18n="ideaEyebrow">La idea</p>
+            <h2 class="mt-5 font-serif text-4xl sm:text-5xl leading-tight" data-i18n="ideaTitle">
+              Aprender a decidir en un mundo que cambia constantemente.
+            </h2>
+          </div>
+          <div class="space-y-6 text-lg leading-8 text-black/70">
+            <p data-i18n="ideaText1">
+              MITO House nace para crear experiencias de aprendizaje que ayuden a los niños a desarrollar las habilidades necesarias para adaptarse, pensar con criterio y tomar mejores decisiones en un entorno cada vez más digital, complejo y cambiante.
+            </p>
+            <p data-i18n="ideaText2">
+              No se trata de sustituir la educación tradicional, sino de complementarla con situaciones reales, dinámicas familiares, juego guiado y tecnología utilizada con intención y responsabilidad.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Method -->
+    <section id="metodo" class="py-24 sm:py-32 bg-white">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
+        <div class="max-w-3xl">
+          <p class="text-sm uppercase tracking-[0.25em] text-mitoWarm font-bold" data-i18n="methodEyebrow">El método</p>
+          <h2 class="mt-5 font-serif text-4xl sm:text-5xl leading-tight" data-i18n="methodTitle">
+            Simular. Conversar. Decidir. Aprender.
+          </h2>
+          <p class="mt-7 text-lg leading-8 text-black/70" data-i18n="methodText">
+            Cada experiencia plantea una situación cercana a la vida real. Los niños exploran opciones, observan consecuencias, conversan y construyen criterio junto a sus familias o compañeros.
+          </p>
+        </div>
+
+        <div class="mt-16 grid md:grid-cols-3 gap-6">
+          <div class="rounded-[2rem] bg-mitoCream p-8 border border-black/5 shadow-soft">
+            <p class="text-sm font-semibold text-black/45">01</p>
+            <h3 class="mt-5 text-2xl font-bold" data-i18n="card1Title">Experiencias híbridas</h3>
+            <p class="mt-4 text-black/68 leading-7" data-i18n="card1Text">Juego físico, conversación y una capa digital opcional para ampliar escenarios y acompañar el progreso.</p>
+          </div>
+          <div class="rounded-[2rem] bg-mitoCream p-8 border border-black/5 shadow-soft">
+            <p class="text-sm font-semibold text-black/45">02</p>
+            <h3 class="mt-5 text-2xl font-bold" data-i18n="card2Title">Decisiones reales</h3>
+            <p class="mt-4 text-black/68 leading-7" data-i18n="card2Text">Dinero, información, amistad, tecnología, frustración, comunicación, riesgo y consecuencias.</p>
+          </div>
+          <div class="rounded-[2rem] bg-mitoCream p-8 border border-black/5 shadow-soft">
+            <p class="text-sm font-semibold text-black/45">03</p>
+            <h3 class="mt-5 text-2xl font-bold" data-i18n="card3Title">Base científica</h3>
+            <p class="mt-4 text-black/68 leading-7" data-i18n="card3Text">Pensamiento crítico, funciones ejecutivas, aprendizaje basado en juego, transferencia y educación socioemocional.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experiencia" class="py-24 sm:py-32 bg-mitoBlack text-white overflow-hidden">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div class="order-2 lg:order-1 rounded-[2rem] overflow-hidden shadow-soft border border-white/10">
+            <img
+              src="familia_arbol.png"
+              alt="Familia construyendo una casa en el árbol como metáfora de aprendizaje colaborativo"
+              class="w-full h-full object-cover aspect-[4/3] image-soft"
+            />
+          </div>
+          <div class="order-1 lg:order-2">
+            <p class="text-sm uppercase tracking-[0.25em] text-mitoSand font-bold" data-i18n="experienceEyebrow">La experiencia</p>
+            <h2 class="mt-5 font-serif text-4xl sm:text-5xl leading-tight" data-i18n="experienceTitle">
+              No vamos en contra de la tecnología. Queremos aprender a usarla con criterio.
+            </h2>
+            <p class="mt-7 text-lg leading-8 text-white/70" data-i18n="experienceText">
+              MITO House integra juego, conversación, pensamiento crítico y herramientas digitales de forma equilibrada. La tecnología forma parte del mundo de los niños; el reto es enseñarles a entenderla, cuestionarla y utilizarla con responsabilidad.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Visual Gallery -->
+    <section class="py-24 sm:py-32 bg-mitoCream">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
+        <div class="max-w-3xl mb-12">
+          <p class="text-sm uppercase tracking-[0.25em] text-mitoWarm font-bold" data-i18n="galleryEyebrow">Aprendizaje en acción</p>
+          <h2 class="mt-5 font-serif text-4xl sm:text-5xl leading-tight" data-i18n="galleryTitle">
+            Una forma más tangible, humana y visual de prepararse para la vida real.
+          </h2>
+        </div>
+
+        <div class="grid lg:grid-cols-12 gap-6">
+          <div class="lg:col-span-7 rounded-[2rem] overflow-hidden bg-white shadow-soft border border-black/5">
+            <img
+              src="ninos_camino.png"
+              alt="Familia en una encrucijada de caminos"
+              class="w-full h-full object-cover aspect-[16/10] image-soft"
+            />
+          </div>
+          <div class="lg:col-span-5 rounded-[2rem] overflow-hidden bg-white shadow-soft border border-black/5">
+            <img
+              src="ninos_arbol.png"
+              alt="Familia construyendo una casa en el árbol"
+              class="w-full h-full object-cover aspect-[4/5] image-soft"
+            />
+          </div>
+          <div class="lg:col-span-12 rounded-[2rem] overflow-hidden bg-white shadow-soft border border-black/5">
+            <div class="grid lg:grid-cols-2">
+              <img
+                src="familia_enigma.png"
+                alt="Familia jugando en casa entre cartas, libros y materiales de aprendizaje"
+                class="w-full h-full object-cover aspect-[4/3] image-soft"
+              />
+              <div class="p-8 sm:p-10 lg:p-12 flex flex-col justify-center">
+                <h3 class="font-serif text-3xl sm:text-4xl leading-tight" data-i18n="galleryCardTitle">
+                  Resolver problemas integrando juego, libros, conversación y tecnología.
+                </h3>
+                <p class="mt-5 text-black/68 text-lg leading-8" data-i18n="galleryCardText">
+                  Así imaginamos MITO House: una experiencia donde distintas disciplinas se encuentran para que niños y familias aprendan a observar, decidir y actuar mejor.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contacto" class="py-24 sm:py-32 bg-white">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
+        <div class="grid lg:grid-cols-2 gap-14 lg:gap-20 items-start">
+          <div>
+            <p class="text-sm uppercase tracking-[0.25em] text-mitoWarm font-bold" data-i18n="contactEyebrow">Contacto</p>
+            <h2 class="mt-5 font-serif text-4xl sm:text-5xl leading-tight text-mitoBlack" data-i18n="contactTitle">
+              Queremos validar MITO House con familias reales.
+            </h2>
+            <p class="mt-7 text-lg leading-8 text-black/70" data-i18n="contactText">
+              Si eres madre, padre, educador, centro educativo, partner o inversor y quieres participar en la validación, déjanos tus datos.
+            </p>
+          </div>
+
+          <form id="contactForm" class="bg-white rounded-[2rem] p-0 lg:p-0">
+            <div class="grid gap-5">
+              <div>
+                <label for="name" class="block text-sm font-bold text-black/75" data-i18n="formNameLabel">Nombre</label>
+                <input id="name" name="Nombre" type="text" required class="mt-2 w-full rounded-2xl border border-black/10 bg-mitoCream/70 px-4 py-3 outline-none focus:ring-2 focus:ring-mitoWarm" placeholder="Tu nombre" data-i18n-placeholder="formNamePlaceholder" />
+              </div>
+
+              <div>
+                <label for="email" class="block text-sm font-bold text-black/75">Email</label>
+                <input id="email" name="Email" type="email" required class="mt-2 w-full rounded-2xl border border-black/10 bg-mitoCream/70 px-4 py-3 outline-none focus:ring-2 focus:ring-mitoWarm" placeholder="tu@email.com" data-i18n-placeholder="formEmailPlaceholder" />
+              </div>
+
+              <div>
+                <label for="profile" class="block text-sm font-bold text-black/75" data-i18n="formProfileLabel">Perfil</label>
+                <select id="profile" name="Perfil" class="mt-2 w-full rounded-2xl border border-black/10 bg-mitoCream/70 px-4 py-3 outline-none focus:ring-2 focus:ring-mitoWarm">
+                  <option data-i18n="optionParent">Madre / padre interesado</option>
+                  <option data-i18n="optionEducator">Educador/a</option>
+                  <option data-i18n="optionSchool">Centro educativo</option>
+                  <option data-i18n="optionPartner">Partner / colaborador</option>
+                  <option data-i18n="optionInvestor">Inversor/a</option>
+                  <option data-i18n="optionOther">Otro</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="message" class="block text-sm font-bold text-black/75" data-i18n="formMessageLabel">Mensaje</label>
+                <textarea id="message" name="Mensaje" rows="5" class="mt-2 w-full rounded-2xl border border-black/10 bg-mitoCream/70 px-4 py-3 outline-none focus:ring-2 focus:ring-mitoWarm" placeholder="Cuéntanos qué te interesa de MITO House" data-i18n-placeholder="formMessagePlaceholder"></textarea>
+              </div>
+
+              <button type="submit" class="mt-2 rounded-full bg-mitoBlack px-8 py-4 text-sm font-bold text-white hover:bg-black/80 transition w-full sm:w-auto sm:justify-self-start" data-i18n="formSubmit">
+                Enviar mensaje
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-mitoBlack text-white py-10">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+      <div>
+        <p class="font-serif uppercase tracking-[0.24em] text-lg">MITO HOUSE</p>
+        <p class="mt-2 text-sm text-white/55" data-i18n="footerTagline">Desmonta mitos. Construye criterio para la vida real.</p>
+      </div>
+      <p class="text-sm text-white/45" data-i18n="footerCopy">© 2026 MITO House. Proyecto en fase de validación.</p>
+    </div>
+  </footer>
+
+  <script>
+    const translations = {
+      es: {
+        pageTitle: 'MITO House | Desmonta mitos. Construye criterio para la vida real.',
+        metaDescription: 'MITO House es un sistema híbrido de aprendizaje para niños y familias que desarrolla pensamiento crítico, toma de decisiones, inteligencia emocional y habilidades para la vida real.',
+        navIdea: 'Objetivo',
+        navMethod: 'Método',
+        navExperience: 'Experiencia',
+        navContact: 'Contacto',
+        headerCta: 'Quiero saber más',
+        heroTitle: 'Desmonta mitos. Construye criterio para la vida real.',
+        heroSubtitle: 'Un sistema híbrido de aprendizaje para niños y familias que combina juego, conversación y experiencias reales para desarrollar pensamiento crítico, toma de decisiones e inteligencia emocional.',
+        heroPrimaryCta: 'Participar en la validación',
+        heroSecondaryCta: 'Ver cómo funciona',
+        ideaEyebrow: 'La idea',
+        ideaTitle: 'Aprender a decidir en un mundo que cambia constantemente.',
+        ideaText1: 'MITO House nace para crear experiencias de aprendizaje que ayuden a los niños a desarrollar las habilidades necesarias para adaptarse, pensar con criterio y tomar mejores decisiones en un entorno cada vez más digital, complejo y cambiante.',
+        ideaText2: 'No se trata de sustituir la educación tradicional, sino de complementarla con situaciones reales, dinámicas familiares, juego guiado y tecnología utilizada con intención y responsabilidad.',
+        methodEyebrow: 'El método',
+        methodTitle: 'Simular. Conversar. Decidir. Aprender.',
+        methodText: 'Cada experiencia plantea una situación cercana a la vida real. Los niños exploran opciones, observan consecuencias, conversan y construyen criterio junto a sus familias o compañeros.',
+        card1Title: 'Experiencias híbridas',
+        card1Text: 'Juego físico, conversación y una capa digital opcional para ampliar escenarios y acompañar el progreso.',
+        card2Title: 'Decisiones reales',
+        card2Text: 'Dinero, información, amistad, tecnología, frustración, comunicación, riesgo y consecuencias.',
+        card3Title: 'Base científica',
+        card3Text: 'Pensamiento crítico, funciones ejecutivas, aprendizaje basado en juego, transferencia y educación socioemocional.',
+        experienceEyebrow: 'La experiencia',
+        experienceTitle: 'No vamos en contra de la tecnología. Queremos aprender a usarla con criterio.',
+        experienceText: 'MITO House integra juego, conversación, pensamiento crítico y herramientas digitales de forma equilibrada. La tecnología forma parte del mundo de los niños; el reto es enseñarles a entenderla, cuestionarla y utilizarla con responsabilidad.',
+        galleryEyebrow: 'Aprendizaje en acción',
+        galleryTitle: 'Una forma más tangible, humana y visual de prepararse para la vida real.',
+        galleryCardTitle: 'Resolver problemas integrando juego, libros, conversación y tecnología.',
+        galleryCardText: 'Así imaginamos MITO House: una experiencia donde distintas disciplinas se encuentran para que niños y familias aprendan a observar, decidir y actuar mejor.',
+        contactEyebrow: 'Contacto',
+        contactTitle: 'Queremos validar MITO House con familias reales.',
+        contactText: 'Si eres madre, padre, educador, centro educativo, partner o inversor y quieres participar en la validación, déjanos tus datos.',
+        formNameLabel: 'Nombre',
+        formNamePlaceholder: 'Tu nombre',
+        formEmailPlaceholder: 'tu@email.com',
+        formProfileLabel: 'Perfil',
+        optionParent: 'Madre / padre interesado',
+        optionEducator: 'Educador/a',
+        optionSchool: 'Centro educativo',
+        optionPartner: 'Partner / colaborador',
+        optionInvestor: 'Inversor/a',
+        optionOther: 'Otro',
+        formMessageLabel: 'Mensaje',
+        formMessagePlaceholder: 'Cuéntanos qué te interesa de MITO House',
+        formSubmit: 'Enviar mensaje',
+        footerTagline: 'Desmonta mitos. Construye criterio para la vida real.',
+        footerCopy: '© 2026 MITO House. Proyecto en fase de validación.',
+        emailSubject: 'Contacto desde MITO House',
+        emailName: 'Nombre',
+        emailProfile: 'Perfil',
+        emailMessage: 'Mensaje'
+      },
+      en: {
+        pageTitle: 'MITO House | Build judgment for real life.',
+        metaDescription: 'MITO House is a hybrid learning system for children and families that develops critical thinking, decision-making, emotional intelligence, and real-world life skills.',
+        navIdea: 'Purpose',
+        navMethod: 'Method',
+        navExperience: 'Experience',
+        navContact: 'Contact',
+        headerCta: 'Learn more',
+        heroTitle: 'Question myths. Build judgment for real life.',
+        heroSubtitle: 'A hybrid learning system for children and families that combines play, conversation, and real-life experiences to develop critical thinking, decision-making, and emotional intelligence.',
+        heroPrimaryCta: 'Join the validation',
+        heroSecondaryCta: 'See how it works',
+        ideaEyebrow: 'The idea',
+        ideaTitle: 'Learning to decide in a constantly changing world.',
+        ideaText1: 'MITO House creates learning experiences that help children develop the skills they need to adapt, think with judgment, and make better decisions in an increasingly digital, complex, and changing environment.',
+        ideaText2: 'It is not about replacing traditional education, but complementing it with real-life situations, family dynamics, guided play, and technology used with intention and responsibility.',
+        methodEyebrow: 'The method',
+        methodTitle: 'Simulate. Talk. Decide. Learn.',
+        methodText: 'Each experience presents a situation close to real life. Children explore options, observe consequences, talk, and build judgment with their families or peers.',
+        card1Title: 'Hybrid experiences',
+        card1Text: 'Physical play, conversation, and an optional digital layer to expand scenarios and support progress.',
+        card2Title: 'Real decisions',
+        card2Text: 'Money, information, friendship, technology, frustration, communication, risk, and consequences.',
+        card3Title: 'Scientific foundation',
+        card3Text: 'Critical thinking, executive functions, game-based learning, transfer, and social-emotional education.',
+        experienceEyebrow: 'The experience',
+        experienceTitle: 'We are not against technology. We want children to use it with judgment.',
+        experienceText: 'MITO House integrates play, conversation, critical thinking, and digital tools in a balanced way. Technology is part of children’s world; the challenge is helping them understand it, question it, and use it responsibly.',
+        galleryEyebrow: 'Learning in action',
+        galleryTitle: 'A more tangible, human, and visual way to prepare for real life.',
+        galleryCardTitle: 'Solving problems by integrating play, books, conversation, and technology.',
+        galleryCardText: 'This is how we imagine MITO House: an experience where different disciplines come together so children and families learn to observe, decide, and act better.',
+        contactEyebrow: 'Contact',
+        contactTitle: 'We want to validate MITO House with real families.',
+        contactText: 'If you are a parent, educator, school, partner, or investor and want to participate in the validation, leave us your details.',
+        formNameLabel: 'Name',
+        formNamePlaceholder: 'Your name',
+        formEmailPlaceholder: 'your@email.com',
+        formProfileLabel: 'Profile',
+        optionParent: 'Interested parent',
+        optionEducator: 'Educator',
+        optionSchool: 'School or educational organization',
+        optionPartner: 'Partner / collaborator',
+        optionInvestor: 'Investor',
+        optionOther: 'Other',
+        formMessageLabel: 'Message',
+        formMessagePlaceholder: 'Tell us what interests you about MITO House',
+        formSubmit: 'Send message',
+        footerTagline: 'Question myths. Build judgment for real life.',
+        footerCopy: '© 2026 MITO House. Validation-stage project.',
+        emailSubject: 'Contact from MITO House',
+        emailName: 'Name',
+        emailProfile: 'Profile',
+        emailMessage: 'Message'
+      }
+    };
+
+    let currentLanguage = localStorage.getItem('mitoLanguage') || 'es';
+
+    function setLanguage(language) {
+      currentLanguage = language;
+      localStorage.setItem('mitoLanguage', language);
+      document.documentElement.lang = language;
+      document.title = translations[language].pageTitle;
+      const description = document.querySelector('meta[name="description"]');
+      if (description) description.setAttribute('content', translations[language].metaDescription);
+
+      document.querySelectorAll('[data-i18n]').forEach((element) => {
+        const key = element.getAttribute('data-i18n');
+        if (translations[language][key]) element.textContent = translations[language][key];
+      });
+
+      document.querySelectorAll('[data-i18n-placeholder]').forEach((element) => {
+        const key = element.getAttribute('data-i18n-placeholder');
+        if (translations[language][key]) element.setAttribute('placeholder', translations[language][key]);
+      });
+
+      document.getElementById('langEs').classList.toggle('lang-active', language === 'es');
+      document.getElementById('langEn').classList.toggle('lang-active', language === 'en');
+    }
+
+    document.getElementById('langEs').addEventListener('click', function () {
+      setLanguage('es');
+    });
+
+    document.getElementById('langEn').addEventListener('click', function () {
+      setLanguage('en');
+    });
+
+    document.getElementById('contactForm').addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      const recipient = 'm.corsan@gmail.com';
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const profile = document.getElementById('profile').value;
+      const message = document.getElementById('message').value.trim();
+      const t = translations[currentLanguage];
+
+      const subject = encodeURIComponent(t.emailSubject);
+      const body = encodeURIComponent(
+        t.emailName + ': ' + name + '\n' +
+        'Email: ' + email + '\n' +
+        t.emailProfile + ': ' + profile + '\n\n' +
+        t.emailMessage + ':\n' + message
+      );
+
+      window.location.href = 'mailto:' + recipient + '?subject=' + subject + '&body=' + body;
+    });
+
+    setLanguage(currentLanguage);
+  </script>
+
+</body>
+</html>
